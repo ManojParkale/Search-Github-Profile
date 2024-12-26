@@ -10,7 +10,10 @@ html,
 body {
   font-family: "Oswald", sans-serif;
   font-size: 62.5%;
+  background-color: #121212; /* Dark background like Netflix */
+  color: #e5e5e5; /* Light grey text for contrast */
 }
+
 body {
   font-size: 1.6rem;
 }
@@ -22,7 +25,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  background-color: beige;
 }
 
 .search {
@@ -30,70 +32,104 @@ body {
   width: 50%;
   max-width: 60rem;
 }
+
 .search input {
   padding: 0.5rem 1rem;
   width: 100%;
+  background-color: #333; /* Dark input background */
+  color: #e5e5e5; /* Light text for input */
+  border: 1px solid #444; /* Slightly lighter border */
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
+
 .search input:focus-visible {
-  outline: 1px solid purple;
+  outline: none;
+  border: 1px solid #f50057; /* Pinkish highlight when focused (Netflix-like) */
+  box-shadow: 0 0 8px rgba(245, 0, 87, 0.6); /* Light glow effect */
 }
 
 .primary-btn {
-  background: purple;
+  background: #f50057; /* Netflix pink color */
   color: white;
   padding: 0.5rem 1rem;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .primary-btn:hover {
-  background: rgba(55, 1, 55, 0.788);
+  background: rgba(245, 0, 87, 0.8); /* Slightly darker pink on hover */
 }
+
 .primary-btn:active {
-  background: rgba(231, 59, 231, 0.788);
+  background: rgba(231, 59, 231, 0.8); /* Light purple color when clicked */
 }
+
 #profileContainer {
   width: 100%;
 }
+
 .profile-box {
   margin: auto;
   padding: 4rem 2rem;
   width: 90%;
   max-width: 78rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6); /* Darker shadow for profile box */
   transition: 0.5s ease-in;
-  background-color:aliceblue
+  background-color: #1a1a1a; /* Dark background for profile box */
+  border-radius: 8px;
 }
+
 .profile-box:hover {
-  transform:scale(1.2);
+  transform: scale(1.05); /* Slight zoom effect on hover */
   transition: 0.5s ease-in;
 }
+
 .top-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
+
 .top-section button {
-  align-self: center;
+  padding: 0.6rem 1rem;
+  background-color: #444; /* Dark button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 .left {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .left h1 {
   font-size: 1.6rem;
+  color: #f50057; /* Pink heading color */
 }
 
 .avatar {
   height: 10rem;
   width: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
 .avatar img {
   height: 100%;
   width: 100%;
-  border-radius: 50%;
+  object-fit: cover;
 }
 
 .about {
   margin: 2rem;
+  color: #ccc; /* Lighter text for description */
 }
 
 .status {
@@ -105,4 +141,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+  background-color: #333; /* Dark background for status items */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Dark shadow effect */
+  transition: 0.3s ease;
+}
+
+.status-item:hover {
+  background-color: #444; /* Lighter dark background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Darker shadow on hover */
 }
